@@ -230,6 +230,65 @@ header {
     margin-top: 3em;
 }
 
+/* Buy Section */
+.buy-section {
+    background-color: var(--background-color-light);
+    padding: 5%;
+    text-align: start;
+}
+
+.buy-title {
+    margin-bottom: .5em;
+}
+
+.buy-subtitle, .buy-section img {
+    margin-bottom: 3em;
+}
+
+.buy-section h2 {
+    margin-bottom: 1em;
+}
+
+.buy-section h1, .buy-section h2 {
+    font-weight: 500;
+}
+
+.buy-section span {
+    color: rgb(130, 128, 128);
+}
+
+.buy-section * {
+    color: black;
+    font-family: "Roboto", sans-serif;
+}
+
+.model-selector {
+    margin-bottom: 1.5em;
+}
+
+.model-selector {
+    border: 2px solid rgb(209, 208, 208);
+    border-radius: 20px;
+    padding: 2em;
+}
+
+.buy-section ul {
+    list-style-type: initial;
+}
+
+.buy-section li {
+    margin: .5em 0;
+}
+
+.model-selector .section-img {
+    margin: 1.5em 0;
+}
+
+.buy-section .solid-btn {
+    color: white;
+    font-weight: bold;
+}
+
 /* Footer */
 footer {
     background-color: black;
