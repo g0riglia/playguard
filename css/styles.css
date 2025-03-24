@@ -1,0 +1,255 @@
+/* Palette di colori */
+:root {
+    /* Colori principali */
+    --primary-color: #2c2c2c; /* Grigio scuro per elementi principali */
+    --secondary-color: #141414; /* Colore scuro per header, footer, sfondi */
+    --accent-color: #ffffff; /* Bianco per il testo principale */
+    --background-color-light: #f4f4f7; /* Grigio chiaro per il corpo della pagina */
+    --background-color-dark: #2c2c2c; /* Grigio scuro per l'header e il footer */
+
+    /* Colori per l'Header */
+    --header-background: #141414; /* Colore scuro per l'header */
+    --header-text-color: #ffffff; /* Colore bianco per il testo nell'header */
+    --header-border-bottom: #d1d1d6; /* Colore del bordo inferiore dell'header */
+
+    /* Colori per il Footer */
+    --footer-background: #2c2c2c; /* Grigio scuro per il footer */
+    --footer-text-color: #ffffff; /* Colore bianco per il testo del footer */
+    --footer-link-color: #0071e3; /* Blu per i link nel footer */
+
+    /* Colori per i bottni */
+    --button-color: #FF6F61;
+    --button-hover: #E65C4F;
+    --button-active: #D14B3A;
+}
+
+/* Typography */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(#000000, var(--background-color-dark));
+    text-align: center;
+}
+
+h1, h2, h3, h4, p, body {
+    margin: 0;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style-type: none;
+}
+
+h1, h2, h3, h4, a {
+    font-family: "Poppins", sans-serif;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.75rem;
+}
+
+p {
+    font-family: "Roboto", sans-serif;
+    line-height: 1.5;
+}
+
+/* Header  */
+header {
+    background-color: var(--header-background);
+    color: var(--header-text-color);
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    gap: 1em;
+}
+
+.logo-img {
+    width: 10%;
+}
+
+.menu-list {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--header-background);
+    font-size: 1.5rem;
+    text-align: start;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease;
+}
+
+.menu-list li {
+    margin: .5em 0;
+}
+
+.menu-list li:hover {
+    text-decoration: underline;
+}
+
+.menu-list.menu-open {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.fa-x {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin-top: 1em;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.fa-bars {
+    margin-left: auto;
+    color: var(--header-text-color);
+    width: 10%;
+}
+
+/* Main */
+.hero, .why-section, .details-section {
+    padding: 5em 5%;
+}
+
+.hero {
+    text-align: center;
+    padding-top: 0;
+}
+
+.hero-img {
+    width: 100%;
+}
+
+.section-text {
+    background-color: black;
+    border-radius: 30px;
+    padding: 2em;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+}
+
+.hero-buttons {
+    margin-top: 1.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.solid-btn, .empty-btn {
+    cursor: pointer;
+    display: inline-block;
+    padding: .5em 1em;
+    border-radius: 30px;
+    text-align: center;
+    width: 100%;
+}
+
+.solid-btn {
+    background-color: var(--button-color);
+    border: none;
+}
+
+.empty-btn {
+    background-color: inherit;
+    border: 1px solid var(--button-color);
+    color: var(--button-color);
+}
+
+.solid-btn:hover, .solid-btn:focus, .empty-btn:hover, .empty-btn:focus {
+    background-color: var(--button-hover);
+    text-decoration: underline;
+}
+
+.empty-btn:hover, .empty-btn:focus, .empty-btn:active {
+    color: inherit;
+}
+
+.solid-btn:active, .empty-btn:active {
+    background-color: var(--button-active);
+}
+
+/* Why Section */
+.why-txt {
+    margin-top: 2.5em;
+}
+
+.fa-solid {
+    width: 50px;
+}
+
+.features-list {
+    margin-top: 2em;
+}
+
+.features-list li{
+    display: flex;
+    gap: 1em;
+    margin: 1em 0;
+    font-weight: bold;
+}
+
+.section-img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.why-section .solid-btn {
+    margin-top: 2em;
+}
+
+.why-section .section-img{
+    margin-top: 3em;
+}
+
+/* Details section */
+.details-section .section-img {
+    margin-bottom: 3em;
+}
+
+.details-section .empty-btn {
+    margin-top: 2em;
+}
+
+.details-section .section-text {
+    margin-top: 3em;
+}
+
+/* Footer */
+footer {
+    background-color: black;
+    padding: 2em 0;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .hidden {
+        display: none;
+    }
+}
+
+@media (min-width: 769px) {
+    #menu-icon, #close-tab {
+        display: none;
+    }
+
+    .menu-list {
+        display: flex;
+        position: static;
+    }
+}
