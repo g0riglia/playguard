@@ -365,19 +365,16 @@ form label, .back-btn {
 
 .team-card {
     background-color: black;
-    padding: 3em 1.5em 7em;
-    width: 80%;
+    padding: 1.5em;
+    width: 100%;
     border-radius: 20px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 1em;
 }
 
 .team-card h3 {
     font-size: 1.25rem;
-}
-
-.team-card p {
-    width: 80%;
-    margin: 0 auto;
 }
 
 .team-card h3, .team-card p {
@@ -386,7 +383,7 @@ form label, .back-btn {
 
 .avatar-img {
     border-radius: 100%;
-    width: 60%;
+    width: 30%;
 }
 
 /* Footer */
