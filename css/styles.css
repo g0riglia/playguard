@@ -59,7 +59,7 @@ h2 {
     font-size: 1.75rem;
 }
 
-p {
+p, label, button, input {
     font-family: "Roboto", sans-serif;
     line-height: 1.5;
 }
@@ -207,20 +207,14 @@ header {
 .section-img {
     width: 100%;
     border-radius: 20px;
+    margin: 3em 0;
 }
 
 .why-section .solid-btn {
     margin-top: 2em;
 }
 
-.why-section .section-img{
-    margin-top: 3em;
-}
-
 /* Details section */
-.details-section .section-img {
-    margin-bottom: 3em;
-}
 
 .details-section .empty-btn {
     margin-top: 2em;
@@ -231,14 +225,18 @@ header {
 }
 
 /* Buy Section */
-.buy-section {
-    background-color: var(--background-color-light);
+.buy-section, .about-us-section {
     padding: 5%;
     text-align: start;
 }
 
-.buy-title {
+.buy-section {
+    background-color: var(--background-color-light);
+}
+
+.page-title {
     margin-bottom: .5em;
+    text-align: left;
 }
 
 .buy-subtitle, .buy-section img {
@@ -249,7 +247,7 @@ header {
     margin-bottom: 1em;
 }
 
-.buy-section h1, .buy-section h2 {
+.page-title, .buy-section h2 {
     font-weight: 500;
 }
 
@@ -287,6 +285,107 @@ header {
 .buy-section .solid-btn {
     color: white;
     font-weight: bold;
+    font-size: 1.25rem;
+}
+
+/* Buy Modal */
+.buy-modal {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 70%;
+    background-color: white;
+    box-shadow: 0 0 20px black;
+    border-radius: 10px;
+    padding: 1em;
+    text-align: start;
+    align-self: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+form input {
+    padding: .5em;
+}
+
+form input, form label {
+    font-size: 1.125;
+}
+
+form button {
+    color: white;
+    font-weight: bold;
+    margin-top: 1em;
+}
+
+form label, .back-btn {
+    margin-top: .5em;
+}
+
+.buy-modal h2, .buy-modal {
+    color: black;
+}
+
+.buy-modal h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1em;
+}
+.back-btn {
+    background-color: inherit;
+    border: none;
+    text-decoration: underline;
+    font-size: 1.25;
+    cursor: pointer;
+}
+
+.back-btn:hover, .back-btn:focus {
+    color: rgb(117, 117, 117);
+}
+
+/* About Us */
+.team-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5em;
+    margin-top: 2em;
+}
+
+.team-card {
+    background-color: black;
+    padding: 3em 1.5em 7em;
+    width: 80%;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.team-card h3 {
+    font-size: 1.25rem;
+}
+
+.team-card p {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.team-card h3, .team-card p {
+    margin-top: 1em;
+}
+
+.avatar-img {
+    border-radius: 100%;
+    width: 60%;
 }
 
 /* Footer */

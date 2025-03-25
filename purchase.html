@@ -19,16 +19,16 @@
         <nav class="nav-tab hidden" id="nav-tab">
             <i class="fa-solid fa-x" id="close-tab"></i>
             <ul class="menu-list" id="menu-list">
-                <li><a href="#main">Home</a></li>
-                <li><a href="purchase.html">Buy Now</a></li>
-                <li><a href="#why-section">Why Buy It</a></li>
-                <li><a href="#details-section">Technical Details</a></li>
-                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./purchase.html">Buy Now</a></li>
+                <li><a href="./index.html">Why Buy It</a></li>
+                <li><a href="./index.html">Technical Details</a></li>
+                <li><a href="./about-us.html">About Us</a></li>
             </ul>
         </nav>
     </header>
     <main class="buy-section">
-        <h1 class="buy-title">Buy PlayGuard Band</h1>
+        <h1 class="page-title">Buy PlayGuard Band</h1>
         <p class="buy-subtitle">From $129 or $5.375/mo. for 24 mo.*</p>
         <img src="images/playguard.jpg" class="section-img" alt="The PlayGuard Band."/>
         <section class="model-selection">
@@ -45,7 +45,7 @@
                         <li>Hypoallergenic silicone</li>
                     </ul>
                     <img src="images/playguard-standard.png" class="section-img" alt="Standard PlayGuard."/>
-                    <button class="solid-btn">Buy Now</button>
+                    <button class="solid-btn" data-playguard="standard">Buy Now</button>
                 </div>
                 <div class="model-selector">
                     <h3>PlayGuard Band PRO</h3>
@@ -58,7 +58,7 @@
                         <li>Remote monitoring via app</li>
                     </ul>
                     <img src="images/playguard-pro.png" class="section-img" alt="PlayGuard Pro."/>
-                    <button class="solid-btn">Buy Now</button>
+                    <button class="solid-btn" data-playguard="PRO">Buy Now</button>
                 </div>
             </div>
         </section>
@@ -70,6 +70,23 @@
             All rights reserved.
         </p>
     </footer>
+    <div class="buy-modal" id="buy-modal">
+        <h2 id="modal-txt">1. Where do we ship it?</h2>
+        <form id="buy-form">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="fullName" placeholder="Sherlock Holmes" required/>
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address" placeholder="Madison Avenue 23" required/>
+            <label for="postcode">Postcode</label>
+            <input type="number" id="postcode" name="postcode" placeholder="80126" maxlength="5" required/>
+            <label for="number">Phone Number</label>
+            <input type="text" id="number" name="phoneNumber" placeholder="+1 123 456 7890" required/>
+            <label for="number">Email</label>
+            <input type="email" id="email" name="email" placeholder="sherlock.holmes@gmail.com" required/>
+            <button class="solid-btn">Next</button>
+        </form>
+        <button class="back-btn" id="back-btn">Go back</button>
+    </div>
     <script src="js/script.js"></script>
 </body>
 </html>
