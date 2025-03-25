@@ -127,11 +127,13 @@ header {
 
 .hero {
     text-align: center;
-    padding-top: 0;
+    padding-top: 2em;
 }
 
 .hero-img {
     width: 100%;
+    margin: 1em;
+    max-width: 670px;
 }
 
 .section-text {
@@ -393,6 +395,17 @@ footer {
 }
 
 /* Media Queries */
+@media (min-width: 482px) {
+    .hero-buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .solid-btn, .empty-btn {
+        width: auto;
+    }
+}
+
 @media (max-width: 768px) {
     .hidden {
         display: none;
@@ -407,5 +420,13 @@ footer {
     .menu-list {
         display: flex;
         position: static;
+    }
+
+    .hero h1 {
+        font-size: 2.25rem;
+    }
+
+    .solid-btn, .empty-btn {
+        font-size: 1.25rem;
     }
 }
