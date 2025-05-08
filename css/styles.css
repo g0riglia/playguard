@@ -72,6 +72,7 @@ header {
     align-items: center;
     padding: 1em;
     gap: 1em;
+    justify-content: space-between;
 }
 
 .logo-img {
@@ -87,9 +88,7 @@ header {
     background-color: var(--header-background);
     font-size: 1.5rem;
     text-align: start;
-    transform: translateY(-100%);
     opacity: 0;
-    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease;
 }
 
 .menu-list li {
@@ -133,7 +132,7 @@ header {
 .hero-img {
     width: 100%;
     margin: 1em;
-    max-width: 670px;
+    max-width: 570px;
 }
 
 .section-text {
@@ -210,6 +209,7 @@ header {
     width: 100%;
     border-radius: 20px;
     margin: 3em 0;
+    max-width: 900px;
 }
 
 .why-section .solid-btn {
@@ -420,6 +420,11 @@ footer {
     .menu-list {
         display: flex;
         position: static;
+        opacity: 1;
+        font-size: 1rem;
+        gap: 1em;
+        justify-content: space-evenly;
+        text-decoration: underline;
     }
 
     .hero h1 {
@@ -428,5 +433,37 @@ footer {
 
     .solid-btn, .empty-btn {
         font-size: 1.25rem;
+    }
+}
+
+@media (min-width: 1100px) {
+    .menu-list {
+        font-size: 1.5rem;
+    }
+
+    .section-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2em;
+        align-items: center;
+    }
+
+    .page-title {
+        font-size: 2.5rem;
+    }
+
+    .buy-subtitle {
+        font-size: 1.5rem;
+    }
+
+    .models {
+        display: flex;
+        gap: 2em;
+        justify-content: space-between;
+    }
+
+    .team-section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
